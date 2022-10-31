@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="icon" href="style/icon.png">
+    <title>Installing Node</title>
+</head>
+<body>
+    <div id="main">
+        <div id="logo"><i>Node Web Development</i></div>
+        <div id="menu">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a id="selected" href="./inst_node.html">Installing Node</a></li>
+                <li><a href="./inst_mongodb.html">Installing MongoDB</a></li>
+                <li><a href="./basics_of_express.html">Using Express</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h1>INSTALLING NODE</h1>
+            <br>
+            <p>
+                The most convenient way of installing Node.js depends on the host system you'll be working 
+                with. Below, the procedures for most major desktop Operating Systems are given. <b>If you use
+                    Linux, 
+                </b>
+                keep in mind that it is considered dangerous and unnecessary to run <tt>sudo npm</tt>, as this can 
+                cause annoying package-management issues.
+            </p>
+            <br>
+
+            <h1>Windows NT</h1>
+            <div style="float:left; width:400px; padding:10px;">
+                For Windows users, Node.js can be downloaded as a <tt>.msi</tt> Windows Installer file from 
+                <a href="https://nodejs.org/en/">the Official Node.js Website.</a> It is recommended, unless you know 
+                what you're doing, that you download the LTS (Long-Term-Support) version, as it may contain fewer 
+                undocumented bugs.
+                <br><br>
+                If you don't have administrative privileges on your machine, a binary version in a zipped folder exists that may 
+                be downloaded and extracted to your user directory, and this directory added to your <tt>path</tt> variable. 
+            </div>
+            <div style="float:right; width:400px; padding:10px;">
+                If you downloaded the <tt>.msi</tt> version of Node, you only need to double-click the file (wherever you put it) 
+                and follow the on-screen prompts to complete installation. After this, Node should have added its own location 
+                to your <tt>PATH</tt> environment variable. If you downloaded the zipped binary, you will have to add the <tt>bin</tt> 
+                folder to your <tt>PATH</tt> manually.
+                <br><br>
+                To check that everything is working, open up a command prompt and type the following:
+                <br><br>
+                <tt><b>> node -v</b></tt>
+                <br>
+                <tt><b>> npm -v</b></tt>
+            </div>
+            <br style="clear:both;">
+            <br>
+
+            <h1>macOS</h1>
+            <div style="float:left; width:400px; padding:10px;">
+                For macOS users, Node.js can be downloaded as a <tt>.pkg</tt> Installer Package file, also from
+                <a href="https://nodejs.org/en/">the Official Node.js Website.</a> Again, the LTS version is recommended 
+                for most users.
+                <br><br>
+                A tarballed macOS binary exists for both Intel and ARM 64-bit processors, whose purpose is similar to the 
+                zipped folder provided for Windows users.
+            </div>
+            <div style="float:right; width:400px; padding:10px;">
+                The installation procedure for Node is similar to any other Mac application. Once complete, Node should be 
+                recognised by the terminal, which you can check with the following:
+                <br><br>
+                <tt><b>$ node -v</b></tt>
+                <br>
+                <tt><b>$ npm -v</b></tt>
+            </div>
+            <br style="clear:both;">
+            <br>
+
+            <h1>Linux</h1>
+            <div style="float:left; width:400px; padding:10px;">
+                For Linux users, Node.js is available on <a href="https://nodejs.org/en/">the Official Node.js Website</a> 
+                as prebuilt binaries for either x86_64 or the ARMv7 and ARMv8 instruction set architectures. All of these 
+                binaries are distributed as <tt>.xz</tt>-compressed tarballs, and should work with any distribution supporting 
+                the listed architectures (which would include Ubuntu, Debian, Linux Mint, etc.). 
+                <br><br>
+                <b>While Node.js can also be installed using a distribution's package manager,</b> this is NOT recommended, 
+                as many package managers only list outdated versions of Node.js, and at any rate, setting up Node.js as a 
+                binary for individual accounts on a Linux machine is easier and, in some ways, safer, than installing it 
+                with superuser privileges.
+            </div>
+            <div style="float:right; width:400px; padding:10px;">
+                Once you have the binaries for Node downloaded, extract them with the following: 
+                <br><br>
+                <tt><b>$ tar -xf node-vxx.xx.x-linux-isa.tar.xz</b></tt>
+                <br><br>
+                Once extracted, add the directory they landed in to your <tt>path</tt> and check that they are recognised 
+                with the following: 
+                <br><br>
+                <tt><b>$ node -v</b></tt>
+                <br>
+                <tt><b>$ npm -v</b></tt>
+            </div>
+            <br style="clear:both;">
+            <br>
+            <div>
+                <h1></h1>
+                <p style="font-size: 70%; text-align: center;">Created 2022 | This entire website is <b>MIT Licensed!</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

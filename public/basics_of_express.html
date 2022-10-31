@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="icon" href="style/icon.png">
+    <title>Setting Up Express</title>
+</head>
+<body>
+    <div id="main">
+        <div id="logo"><i>Node Web Development</i></div>
+        <div id="menu">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./inst_node.html">Installing Node</a></li>
+                <li><a href="./inst_mongodb.html">Installing MongoDB</a></li>
+                <li><a id="selected" href="./basics_of_express.html">Using Express</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h1>THE BASICS</h1>
+            <br>
+            <p>
+                Express.js is like any other Node.js module; it can be installed at the command-line with 
+                <tt>npm install</tt>. Before you do this, however, it pays to set up a project directory 
+                so that dependencies are easier to manage and <tt>npm</tt> doesn't give you a hard time.
+            </p>
+            <br>
+            <h1></h1>
+            <p>
+                <b>To begin</b>, open up your terminal and navigate to a suitable place to keep your projects. 
+                Then create a directory for your Express.js application:
+                <br><br>
+                <tt><b>$ md your-project</b></tt>
+                <br>
+                <tt><b>$ cd your-project</b></tt>
+                <br><br>
+                You can call your project whatever you want, provided it matches any naming scheme you prefer. 
+                Once the directory is ready, initiate a Node.js project with the following:
+                <br><br>
+                <tt><b>$ npm init</b></tt>
+                <br><br>
+                You will be asked a series of questions regarding naming and versioning, test scripts, etc. 
+                Leave every option blank, except the <b>Author</b> and <b>Description</b> options. If all goes well, 
+                you should have a new project with a <tt>package.json</tt> file containing basic information. The 
+                default entry point will be <tt>index.js</tt>, but there is nothing besides the <tt>package.json</tt> 
+                file in your project directory, so go ahead and make <tt>index.js</tt> with your favourite text editor. 
+                Leave it blank for now.
+                <br><br>
+                Now, we can install Express.js as a dependency. Go back to your terminal and run the following: 
+                <br><br>
+                <tt><b>$ npm install express</b></tt>
+                <br><br>
+                If your connection is good and you don't have any bad network settings, you should see a list of <tt>npm</tt> 
+                output and finally a statement of package status. Now Express.js is listed in our <tt>package.json</tt> and 
+                exists under a new <tt>node_modules</tt> directory in your project. Now you can open up the <tt>index.js</tt> 
+                file you made earlier and add the following content to it:
+                <br><br>
+                <h1></h1>
+                <tt style="background-color: #fff;">
+                    <pre>
+const express = require('express');
+
+const PORT = 4000;
+const app = express();
+
+app.use(express.static('./public'));
+
+app.get('/', (req, res) => {
+    res.send('Add "home.html" on end of URL.');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);<br>
+});
+                    </pre>
+                </tt>
+                <h1></h1>
+                <br><br>
+                The first line of this program requires the <tt>express</tt> module from the dependencies of the project. 
+                Once it is declared, we use it to set up a server app (<tt>const app = express()</tt>) and tell that app 
+                to serve static files from a specific directory with the <tt>express.static()</tt> middleware function. 
+                It is common practice to serve static files from a <tt>public</tt> folder, so that you can easily tell 
+                what will be publicly available from your site.
+                <br>
+                The best kind of static file to serve is an HTML file, as HTML is ultimately what makes every web page... 
+                a web page. But this guide assumes that you don't have an IDE that can auto-generate an HTML template for you 
+                (an IDE that can do that is <a href="https://code.visualstudio.com/">Visual Studio Code</a>), so we'll start 
+                with plaintext for now. Later on, if you like, you can copy the pages this website uses and dump them in your 
+                <tt>public</tt> folder - That's entirely plausible, because this website is <b>MIT Licensed</b>.
+                <br><br>
+                Create a folder named <tt>public</tt> in your project directory so that Express knows what directory you mean 
+                in line 6 above. In this folder, create a file called 'test.txt', and write "Hello World!" in it. Save it, 
+                then open up a terminal in your project directory and enter the following to start up your server:
+                <br><br>
+                <tt><b>$ node index.js</b></tt>
+                <br><br>
+                If nothing breaks, and there aren't any mistakes in the files you created, the terminal should print the 
+                following:
+                <br><br>
+                <tt><b>Server running on port 4000</b></tt>
+                <br><br>
+                Now open up a web browser (whichever one you like) and enter the following address in the address bar:
+                <br><br>
+                <tt><b>http://127.0.0.1:4000/test.txt</b></tt>
+                <br><br>
+                If all goes well, you should see output similar to the following screenshot:
+                <br><br>
+                <img width="592" height="319" src="./style/success.png" class="image">
+                <br><br>
+                <h1></h1>
+                If you can see this - Congratulations! You've successfully set up a web server!
+                <br><br>
+                Now, there's much more you can do with this framework than just say "Hello World!" As noted on the 
+                <a href="./home.html">Home Page</a>, you can add an underlying MongoDB database instance with the Mongoose 
+                ORM framework on top of it, turning your site into the backend for a full-fledged web application. The 
+                tutorial for that is not covered here; however, one is given in the <a href="./home.html#extlnks">External Links</a> 
+                of this site's landing page. Go ahead and read that if you're interested.
+            </p>
+            <div>
+                <h1></h1>
+                <p style="font-size: 70%; text-align: center;">Created 2022 | This entire website is <b>MIT Licensed!</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

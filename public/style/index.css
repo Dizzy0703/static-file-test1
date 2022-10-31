@@ -1,0 +1,96 @@
+body {
+    font: normal .75em lucida, sans-serif;
+    background: #fff url(background2.png) repeat;
+}
+#logo {
+    background-image: linear-gradient(to left, cornflowerblue, #EEE);
+    font: 300% bahnschrift;
+    text-align: left;
+    border-top: 6px solid #777777;
+    border-bottom: 6px solid #777777;
+    padding-top: 24px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+}
+#main {
+    width: 900px;
+    border: 1px solid;
+}
+#main, #menu, #content, #logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+#menu {
+    height: 31px;
+    margin-top: -31px;
+    margin-left: 4px;
+    font-size: 120%;
+}
+#content {
+    background: #fff;
+    color: #000;
+    border-color: #d5d2d6;
+    padding: 10px 15px 15px 19px;
+    font-size: 120%;
+    overflow: hidden;
+    text-align: justify;
+}
+tt {
+    font-size: 120%;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+h1 {
+    background-image: linear-gradient(to left, cornflowerblue, #EEE);
+    color: #000;
+    border-bottom: 1px solid #777777;
+    font-size: 150%;
+    font-weight: 400;
+    font-family: bahnschrift;
+    margin: 12px 0px 12px;
+    padding: 10px 0px 5px 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+li {
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+    color: #6495ed;
+    transition: color 300ms;
+}
+a:hover {
+    color: #2264dd;
+}
+#menu ul {
+    margin: 0 auto;
+}
+#menu li {
+    float: left;
+    list-style: none;
+    margin: 0px 5px 0px 0px;
+    padding: 0px;
+}
+#menu li a {
+    background: #ddd;
+    color: #000;
+    padding: 6px 19px 6px 19px;
+    float: left;
+    display: block;
+    border-radius: 4px;
+    transition: background 300ms;
+}
+#menu li a:hover, #menu li a#selected:hover {
+    background: #aaa;
+}
+#menu li a#selected {
+    background: rgb(255, 192, 75);
+}
+.image {
+    aspect-ratio: auto 590 / 300;
+    border: 1px solid #777777;
+    border-radius: 10px;
+}
